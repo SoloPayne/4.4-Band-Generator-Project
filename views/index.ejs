@@ -1,14 +1,17 @@
 <%- include("partials/header.ejs") %>
 
-  <% if (locals.bandName) {%>
+  <% if (locals.setup) {%>
     <h1>
-      <%= locals.bandName %>
+      <%= setup %>
     </h1>
-    <% } else {%>
-      <h1>Click to generate band names</h1>
+    <h2>
+      <%= delivery %>
+    </h2>
+    <% } else { %>
+      <h1>Click to generate jokes </h1>
       <% } %>
-        <form action="/submit" method="POST">
-          <input type="submit" class="btn" value="Generate Name">
+        <form method="POST">
+          <input type="submit" class="btn" value="Generate Name" formaction="/submit">
         </form>
 
 
